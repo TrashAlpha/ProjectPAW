@@ -11,27 +11,23 @@
     </footer>
 
     <style>
-        /* Mengatur body dan html agar memiliki tinggi 100% */
         html, body {
             margin: 0;
             padding: 0
             height: 100%;
         }
 
-        /* Flexbox pada body untuk membuat footer sticky */
         body {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
-        /* Konten utama harus mengambil semua ruang yang tersisa */
         .content {
             flex: 1;
             padding: 10px;
         }
 
-        /* Style sederhana untuk footer */
         footer {
             background-color: #f1f1f1;
             text-align: center;
