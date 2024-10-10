@@ -39,11 +39,11 @@ if (!isset($_SESSION['username'])) {
 
 <style>
     .img {
-        width: 200px;  /* Ubah lebar gambar */
-        height: 150px; /* Ubah tinggi gambar */
+        width: 200px; 
+        height: 150px; 
         object-fit: cover; /* Menjaga aspect ratio dan memotong gambar bila perlu */
-        display: block;  /* Pastikan gambar ditampilkan sebagai block */
-        margin: 10px 0;  /* Memberikan sedikit jarak vertikal antara gambar dan teks */
+        display: block;  
+        margin: 10px 0;  
     }
 </style>
 

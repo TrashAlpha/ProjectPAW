@@ -18,7 +18,7 @@ $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 echo "<li>
-                <img class='img' src ="  .$row['address'] . " alt=" . $row['title'] . ">
+                <img class='img' src =" . $row['address'] . " alt=" . $row['title'] . ">
                 <a href='detail_photo.php?id=" . $row["id"] . "'>" . $row["title"] . "</a>
                 </li>";
             }
