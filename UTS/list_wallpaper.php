@@ -36,7 +36,7 @@ $result = $conn->query($sql);
                 echo "</a>";    
                 echo "<div class='wallpaper-actions'>";
                 echo "<button class='edit-button' onclick=\"window.location.href='new_wallpaper.php?id=" . $row["id"] . "'\" title='Edit wallpaper'>Edit</button>";
-                echo "<button class='delete-button' onclick=\"confirm('Are you sure you want to delete this wallpaper?') ? location.href='delete_wallpaper.php?id=" . $row['id'] . "' : ''\" title='Delete wallpaper'>Delete</button>";
+                echo "<button class='delete-button' onclick=\"confirm('Apakah Anda yakin untuk menghapus wallpaper ini?') ? location.href='delete_wallpaper.php?id=" . $row['id'] . "' : ''\" title='Delete wallpaper'>Delete</button>";
                 echo "</div>";          
                 echo "</div>";
             }

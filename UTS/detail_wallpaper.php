@@ -42,13 +42,20 @@ if (!isset($_SESSION['username'])) {
         <h2>Detail Wallpaper</h2>
         <div class="wallpaper-card">
             <img class="img" src="<?php echo $row["address"]; ?>" alt="<?php echo $row["title"]; ?>">
-            <div class="wallpaper-details">
-                <p><span>Judul :</span> <?php echo $row["title"]; ?></p>
-                <p><span>Author :</span> <?php echo $row["author"]; ?></p>
-                <p><span>Image Size :</span> <?php echo $row["size"]; ?></p>
-                <p><span>Image Resolution :</span> <?php echo $row["resolution"]; ?></p>
-                <p><span>File Size :</span> <?php echo $row["file_size"]; ?></p>
-                <p><span>Uploaded by :</span> <?php echo $row["uploader"]; ?></p>
+            <div class="wallpaper-content">
+                <div class="wallpaper-details">
+                    <p><span>Judul :</span> <?php echo $row["title"]; ?></p>
+                    <p><span>Author :</span> <?php echo $row["author"]; ?></p>
+                    <p><span>Image Size :</span> <?php echo $row["size"]; ?></p>
+                    <p><span>Image Resolution :</span> <?php echo $row["resolution"]; ?></p>
+                    <p><span>File Size :</span> <?php echo $row["file_size"]; ?></p>
+                    <p><span>Uploaded by :</span> <?php echo $row["uploader"]; ?></p>
+                </div>
+                <div class="download-button-container">
+                    <a href="<?php echo $row["address"]; ?>" download="<?php echo $row["title"]; ?>" class="download-button">
+                        Download Gambar
+                    </a>
+                </div>
             </div>
             <a href="list_wallpaper.php">Kembali ke Daftar Foto</a>
         </div>

@@ -111,7 +111,7 @@ if ($wallpaper_id) {
 </head>
 <body>
     <div class="insert-wallpaper-container">
-        <h2>Tambah Wallpaper Baru</h2>
+        <h2><?php echo $wallpaper ? 'Edit Wallpaper' : 'Tambah Wallpaper Baru'; ?></h2>
         <form enctype="multipart/form-data" action="" method="POST">
             <?php if ($wallpaper): ?>
                 <input type="hidden" name="id" value="<?php echo $wallpaper['id']; ?>">
