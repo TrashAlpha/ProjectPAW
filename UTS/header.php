@@ -3,26 +3,18 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
-    <style>
-        .nav {
-            background-color: #f2f2f2;
-            padding: 10px;
-            width: 100%;
-            font-family: Times New Roman;
-        }
-        .nav a {
-            margin: 0 10px;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="nav">
-        <a href="index.php">Home</a>
-        <a href="list_photo.php">List Photo</a>
+        <a href="list_wallpaper.php">List Wallpaper</a>
+        <a href="new_wallpaper.php">Upload Wallpaper</a>
+
         <?php
         if (isset($_SESSION['username'])) {
             echo '<a href="logout.php">Logout</a>';
@@ -31,4 +23,6 @@ session_start();
             echo '<a href="register.php">Register</a>';
         }
         ?>
-    </div>
+    </div> 
+</body>
+</html>

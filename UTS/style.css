@@ -1,0 +1,324 @@
+body {
+    background-color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes at least the full height of the viewport */
+}
+
+/* header css */
+.nav {
+    background-color: #9a95e3;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav a {
+    margin: 0 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: white;
+}
+
+/* login & register css */
+.container {
+    flex: 1; /* This ensures the container takes up available space */
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align the form vertically */
+    align-items: center; /* Align the form horizontally */
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: xx-large;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #5a67d8; /* Warna fokus ungu */
+    outline: none;
+}
+
+.form-group input[type="submit"]:hover {
+    border-color: #5a67d8;
+    cursor: pointer;
+}
+
+/* list wallpaper css */
+.wallpaper-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wallpaper-container h2 {
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.wallpaper-container h3 {
+    text-align: center;
+}
+
+.wallpaper-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.wallpaper-card-list {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.wallpaper-card-list:hover {
+    transform: scale(1.05);
+}
+
+.wallpaper-card-list a {
+    text-decoration: none;
+    color: #333;
+}
+
+.img-list {
+    width: 100%;
+    max-height: 180px;
+    border-radius: 5px;
+    object-fit: fill;  
+}
+
+.wallpaper-card-list h3 {
+    font-size: 20px;
+    margin: 10px 0 0;
+}
+
+.wallpaper-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.edit-button, .delete-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.edit-button:hover, .delete-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .wallpaper-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .wallpaper-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* detail wallpaper css */
+.wallpaper-container-detail {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.wallpaper-card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center contents vertically */
+    align-items: center;
+    min-height: 400px; /* Ensure card has minimum height */
+    flex-grow: 1; /* Allow card to grow to fill space */
+}
+
+.wallpaper-card a {
+    margin: 10px 0;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.wallpaper-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center; 
+    font-size: 24px;
+}
+
+.wallpaper-details p {
+    margin: 10px 0;
+}
+
+.wallpaper-details span {
+    font-weight: bold;
+}
+
+/* new wallpaper css */
+.insert-wallpaper-container {
+    max-width: 600px; /* Set maximum width to 600px */
+    width: 100%; /* Ensure the container takes up 100% width of the screen, up to the max width */
+    margin: 80px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow lembut */
+    text-align: center;
+}
+
+.insert-wallpaper-container h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #5a67d8; /* Konsisten dengan warna utama */
+}
+
+/* Label dan Input form */
+.insert-wallpaper-container label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #2d3748;
+    font-size: 16px;
+}
+
+.insert-wallpaper-container input[type="text"],
+.insert-wallpaper-container input[type="file"],
+.insert-wallpaper-container select {
+    width: 100%; /* Ensures all input elements take the full width of the container */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Ensures padding does not exceed container width */
+}
+
+.insert-wallpaper-container input[type="text"]:focus,
+.insert-wallpaper-container input[type="file"]:focus,
+.insert-wallpaper-container select:focus {
+    border-color: #5a67d8; /* Warna fokus ungu */
+    outline: none;
+}
+
+/* Tombol submit */
+.insert-wallpaper-container input[type="submit"] {
+    width: 100%; /* Set width to 100% to match input fields */
+    padding: 12px;
+    background-color: #5a67d8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.insert-wallpaper-container input[type="submit"]:hover {
+    background-color: #434190;
+}
+
+/* Wallpaper Preview */
+.insert-wallpaper-container img {
+    margin-top: 15px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* footer css */
+footer {
+    background-color: #9a95e3;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    margin-top: auto; /* Push the footer to the bottom of the page when content is small */
+}
+
+footer p {
+    margin: 0;
+    color: black;
+}
+
+/* footer css */
+footer {
+    background-color: #9a95e3;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    margin-top: auto; /* Push the footer to the bottom of the page when content is small */
+}
+
+footer p {
+    margin: 0;
+    color: black;
+}
