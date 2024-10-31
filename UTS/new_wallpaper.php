@@ -17,7 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $wallpaper_image = null; // untuk menyimpan address dari gambar
     
-    // dikeluarkan pesan apabila upload error
     if (isset($_FILES['uploadedfile']) && $_FILES['uploadedfile']['error'] !== UPLOAD_ERR_NO_FILE) {
         $target_path = "photos/";
         $target_path = $target_path . basename($_FILES['uploadedfile']['name']); 
